@@ -13,7 +13,7 @@ app.get('/', (req, res)=>{
 
 // display drinks as json
 app.get('/drinks', (req, res) =>{
-    res.send(drinks);
+    res.render('drinks-index.ejs');
 });
 
 app.listen(port, ()=>{

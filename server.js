@@ -13,7 +13,7 @@ app.get('/', (req, res)=>{
 
 // display drinks as json
 app.get('/drinks', (req, res) =>{
-    res.render('drinks-index.ejs');
+    res.render('drinks-index.ejs', { allDrinks: drinks});
 });
 
 app.listen(port, ()=>{

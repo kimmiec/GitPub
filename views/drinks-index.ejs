@@ -18,9 +18,17 @@
     <body>
         <h1>Welcome to GitPub</h1>
         <ul>
+            <h2>Drinks</h2>
             <% for(let i = 0; i < allDrinks.length; i++) { %> 
                 <li>
-                    <a href="/drinks/<%= i %>"><%= allDrinks[i].name %></a>
+                    <a href="/drinks/<%=i%>"><%= allDrinks[i].name %></a>
+                </li>
+            <% } %>
+                <br />
+                <h2>Foods</h2>
+            <% for(let i = 0; i < allFood.length; i++) { %> 
+                <li>
+                    <a href="/food/<%=i%>"><%= allFood[i].name %></a>
                 </li>
             <% } %>
         </ul>

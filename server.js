@@ -21,7 +21,10 @@ app.get('/drinks/:indexOfDrinksArray', (req, res) =>{
     res.render('drinks-show.ejs', {
         drink: drinks[req.params.indexOfDrinksArray]
     });
+
 });
+
+
 
 // add show route
 // app.get('/drinks/:indexOfDrinksArray', (request, response) =>{

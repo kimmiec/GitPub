@@ -17,10 +17,19 @@ app.get('/drinks', (req, res) =>{
 });
 
 // display drinks id
-app.get('/drinks/:id', (req, res) =>{
-    res.send(req.params.id);
+app.get('/drinks/:indexOfDrinksArray', (req, res) =>{
+    res.render('drinks-show.ejs', {
+        drink: drinks[req.params.indexOfDrinksArray]
+    });
 });
 
+// add show route
+// app.get('/drinks/:indexOfDrinksArray', (request, response) =>{
+//     response.render('drinks-show.ejs', {
+//         drink: drinks[req.params.indexOfDrinksArray]
+//     });
+//     console.log(drink)
+// });
 
 
 app.listen(port, ()=>{
